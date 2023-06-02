@@ -2,7 +2,9 @@ import React from 'react'
 import jsPDF from 'jspdf'
 import img from '../assets/certificate-background.png'
 
-const generateCertificate = (name, course) => {
+const generateCertificate = (recipients) => {
+  recipients.forEach(({ name, course }) => {
+
   // Create a new jsPDF instance
   const doc = new jsPDF();
 
@@ -20,12 +22,14 @@ const generateCertificate = (name, course) => {
 
   // Save the PDF
   doc.save(`${name}-${course}.pdf`);
+  });
 };
 
 function CertificateGenerator(props) {
+
     return (
       <div>
-        <button onClick={() => generateCertificate(props.name, props.course)}>Generate Certificate</button>
+        <button onClick={() => generateCertificate(props.recipients)}>Generate Certificate</button>
       </div>
     );
   }
