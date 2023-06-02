@@ -2,7 +2,7 @@
 
 The Certificate Generator is a React application that allows users to dynamically generate custom certificates. It utilizes the jsPDF library to create PDF documents with background images, recipient names, and course details. 
 
-Medium link:
+Medium article link:https://medium.com/@yinong.li97/4-steps-to-generate-certificate-jspdf-react-6fa85f2aab0
 
 ## Features
 
